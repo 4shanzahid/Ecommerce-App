@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { logo } from "@/public";
 import { navLinks } from "@/constants";
 import { useState } from "react";
 import { FiShoppingCart, FiSearch } from "react-icons/fi";
@@ -15,7 +16,7 @@ const Navbar = () => {
     <nav className="mx-6 my-18 relative flex py-4 justify-between items-center">
       <div>
         <Link href="/">
-          <Image src="./logo.svg" alt="logo" width={150} height={150}></Image>
+          <Image src={logo} alt="logo" width={150} height={150}></Image>
         </Link>
       </div>
 
