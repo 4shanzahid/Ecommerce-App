@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:justify-between px-20 py-8 bg-white">
+    <div className="flex flex-col lg:flex-row items-center lg:justify-between px-20 py-10 bg-white">
       {/* Left side */}
 
       <div className="lg:w-1/2 lg:pr-8 text-left">

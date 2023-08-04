@@ -1,3 +1,5 @@
+import { defineField } from "sanity";
+
 export default {
     name: 'product',
     title: 'Product',
@@ -35,6 +37,16 @@ export default {
         name: 'details',
         title: 'Details',
         type: 'string',
-      }
+      },
+      defineField({
+        name: "category",
+        title: "Product Category",
+        type: "reference",
+        to: [
+              {
+                  type: "category"
+              }
+        ]
+    })
     ]
   }

@@ -7,13 +7,15 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import {apiVersion, dataset, projectId} from './sanity/env'
+// import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
+
+const apiVersion='2023-07-18'
 
 export default defineConfig({
   basePath: '/studio',
-  projectId,
-  dataset,
+  dataset:'production',
+  projectId:'1n234eqq',
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [
