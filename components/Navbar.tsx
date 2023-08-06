@@ -63,8 +63,7 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
-                {/* <a href={`#${nav.id}`}>{nav.title}</a> */}
-                <Link href={`/category/${nav.title}`}>
+                <Link href={`/category/${nav.id}`}>
                   {nav.title}
                 </Link>
               </li>

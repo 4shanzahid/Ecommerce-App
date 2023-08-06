@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchLatestProducts() {
       const fetchedProducts = await fetchAllproducts();
-      setProducts(fetchedProducts.slice(0, 4)); // Only the first 4 products
+      setProducts(fetchedProducts.slice(0, 3)); // Only the first 4 products
     }
 
     fetchLatestProducts();
