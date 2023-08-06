@@ -1,15 +1,18 @@
-"use client"
+"use client";
 import Product from "@/components/Product";
-import { fetchProductbyCategory , fetchAllproducts} from "@/utils/FetchProducts";
-import { useState , useEffect} from "react";
+import {
+  fetchProductbyCategory,
+  fetchAllproducts,
+} from "@/utils/FetchProducts";
+import { useState, useEffect } from "react";
 
-const ProductCategory =  ({ params }: { params: { name: string } }) => {
+const ProductCategory = ({ params }: { params: { name: string } }) => {
   const [products, setProducts] = useState([]);
   const name: string = params.name;
 
   useEffect(() => {
     const fetchProducts = async () => {
-      if (name === 'all') {
+      if (name === "all") {
         // Fetch all products
         const allProducts = await fetchAllproducts(); // Implement this function to fetch all products
         setProducts(allProducts);
@@ -37,9 +40,9 @@ const ProductCategory =  ({ params }: { params: { name: string } }) => {
               price={product.price}
             />
           ))
-          ) : (
-            <p>No products in this category.</p>
-          )}
+        ) : (
+          <p className="text-2xl flex items-center content-center h-screen">No products in this category.</p>
+        )}
       </div>
     </>
   );

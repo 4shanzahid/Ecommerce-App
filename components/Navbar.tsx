@@ -26,7 +26,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-[16px] ${
-                active === nav.title ? "font-bold text-black" : ""
+                active === nav.title ? "font-bold text-black rounded-full px-4 py-2 border border-transparent bg-slate-700 bg-opacity-20" : ""
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
             >
@@ -45,21 +45,21 @@ const Navbar = () => {
         />
       </div>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-end items-center pb-1">
         <button onClick={() => setToggle(!toggle)}>
-          {toggle ? <AiOutlineClose size={25} /> : <BiMenuAltRight size={30} />}
+          {toggle ? <AiOutlineClose size={25} /> : <BiMenuAltRight size={31} />}
         </button>
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-8 bg-white absolute top-12 right-0 mx-4 my-2 min-w-[180px] rounded-xl border border-b-slate-400 sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-black" : "text-dimWhite"
+                  active === nav.title ? "text-black border border-transparent bg-slate-700 bg-opacity-20 rounded-xl px-3" : "text-dimWhite"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
