@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import Product from "@/components/Product";
-import { fetchProducts } from "@/utils/FetchProducts";
+import { fetchAllproducts } from "@/utils/FetchProducts";
 import { useState, useEffect } from "react";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     async function fetchLatestProducts() {
-      const fetchedProducts = await fetchProducts();
+      const fetchedProducts = await fetchAllproducts();
       setProducts(fetchedProducts.slice(0, 4)); // Only the first 4 products
     }
 
